@@ -137,7 +137,7 @@ class FormField(models.Model):
     type = models.CharField(
         _('type'), max_length=20, choices=[r[:2] for r in FIELD_TYPES])
     choices = models.CharField(
-        _('choices'), max_length=1024, blank=True,
+        _('choices'), max_length=8191, blank=True,
         help_text=_('Comma-separated'))
     help_text = models.CharField(
         _('help text'), max_length=1024, blank=True,
